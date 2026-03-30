@@ -1,0 +1,17 @@
+.home-container {
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  color: #e2b714;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+}
