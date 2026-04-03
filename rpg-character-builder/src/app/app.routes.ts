@@ -5,6 +5,7 @@ import { SigninComponent } from './signin/signin.component';
 import { CreateCharacterComponent } from './create-character/create-character.component';
 import { CreateGuildComponent } from './create-guild/create-guild.component';
 import { CharacterFractionComponent } from './character-fraction/character-fraction.component';
+import { MenuComponent } from './menu/menu.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,5 +14,6 @@ export const routes: Routes = [
   { path: 'signin', component: SigninComponent },
   { path: 'create-character', component: CreateCharacterComponent },
   { path: 'create-guild', component: CreateGuildComponent },
-  { path: 'character-fraction', component: CharacterFractionComponent }
+  { path: 'character-fraction', component: CharacterFractionComponent },
+  { path: 'menu', component: MenuComponent },
 ];

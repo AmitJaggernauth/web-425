@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rpg-character-builder</title>
+</head>
+<body>
+  <h2 class="title">Meet the Characters</h2>
+
+<div class="grid">
+  <div class="card" *ngFor="let c of characters">
+    <h3>{{ c.name }}</h3>
+    <p><strong>Gender:</strong> {{ c.gender }}</p>
+    <p><strong>Class:</strong> {{ c.class }}</p>
+    <p><strong>Faction:</strong> {{ c.faction }}</p>
+    <p><strong>Starting Location:</strong> {{ c.startingLocation }}</p>
+    <p class="funFact">{{ c.funFact }}</p>
+  </div>
+</div>
+</body>
+</html>
