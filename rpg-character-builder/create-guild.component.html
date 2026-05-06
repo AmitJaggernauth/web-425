@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guild</title>
+</head>
+<body>
+    <h2>Create Guild</h2>
+
+<form [formGroup]="guildForm" (ngSubmit)="onSubmit()">
+
+  <label>Guild Name</label>
+  <input type="text" formControlName="guildName">
+
+  <label>Description</label>
+  <textarea formControlName="description"></textarea>
+
+  <label>Type</label>
+  <select formControlName="type">
+    <option value="">Select Type</option>
+    <option>Competitive</option>
+    <option>Casual</option>
+    <option>Social</option>
+    <option>Educational</option>
+  </select>
+
+  <label>Notification Preference</label>
+  <div>
+    <label><input type="radio" value="Email" formControlName="notificationPreference"> Email</label>
+    <label><input type="radio" value="SMS" formControlName="notificationPreference"> SMS</label>
+    <label><input type="radio" value="InApp" formControlName="notificationPreference"> In-App</label>
+  </div>
+
+  <label>
+    <input type="checkbox" formControlName="acceptTerms">
+    Accept Terms
+  </label>
+
+  <button type="submit" [disabled]="guildForm.invalid">Create Guild</button>
+</form>
+
+<hr>
+
+<h3>Created Guilds</h3>
+<table *ngIf="guilds.length > 0">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Notification</th>
+  </tr>
+  <tr *ngFor="let g of guilds">
+    <td>{{ g.guildName }}</td>
+    <td>{{ g.description }}</td>
+    <td>{{ g.type }}</td>
+    <td>{{ g.notificationPreference }}</td>
+  </tr>
+</table>
+
+</body>
+</html>
