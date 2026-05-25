@@ -1,0 +1,20 @@
+.resume-link {
+  font-weight: 600;
+  color: #007bff;
+  text-decoration: none;
+}
+.resume-link:hover {
+  text-decoration: underline;
+}
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.resume-header .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
